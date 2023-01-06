@@ -1,0 +1,75 @@
+:root {
+    --tool-buttons-margin: 0.2vw;
+    --tool-buttons-border-radius: 0.4vw;
+    --tool-buttons-border-width: 0.25vw;
+    --body-background-color: rgb(30, 30, 30);
+    --text-color: #ffffff;
+    --tool-buttons-border-color: rgb(255, 167, 167);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+}
+
+#mainCanvas {
+    width: 99vw;
+    border: 1px solid rgb(62, 62, 62);
+    border-top: none;
+    height: 70vh;
+    margin-bottom: 0.4vh;
+}
+
+#color-strip {
+    width: 96vw;
+    height: 10vh;
+}
+
+#wb-strip {
+    width: 3vw;
+    height: 10vh;
+}
+
+#color-picker-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#color-preview-box {
+    width: 99vw;
+    height: 5vh;
+    /* border: 1px solid #000; */
+    border-bottom: 1px solid #ffffff;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-icons-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tool-button svg {
+    width: 3vw;
+    height: auto;
+}
+
+.tool-button {
+    margin: var(--tool-buttons-margin) 0 var(--tool-buttons-margin) var(--tool-buttons-margin);
+    border-radius: var(--tool-buttons-border-radius);
+    border: var(--tool-buttons-border-width) solid var(--tool-buttons-border-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tool-button:hover {
+    background-color: rgb(255, 167, 167);
+    transform: scale(1.05);
+}
